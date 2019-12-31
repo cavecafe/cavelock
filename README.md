@@ -5,6 +5,7 @@ DIY Smart Door Lock using Raspberry Pi with Apple HomeKit integration
 ## Getting Started
 cavelock is a D.I.Y. smart door lock that is runing on Raspberry Pi. It opens and closes a simple storm door deadbolt using Apple Home app. It is simply created for my personal uses, hoping it is useful for anyone elses.
 <br>
+<br>
 [![cavelock demo](https://img.youtube.com/vi/mZIwY49XvS4/0.jpg)](https://www.youtube.com/watch?v=mZIwY49XvS4)
 
 ## Prerequisites
