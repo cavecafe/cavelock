@@ -20,7 +20,7 @@ cavelock is a D.I.Y. smart door lock that is runing on Raspberry Pi. It opens an
 * Control a deadbolt from 90 to zero degree with a servo
 * A relay shuts down the current once the servo moved to the target angle (it saves power consumption)
 * A push button overrides the control of deadbolt for manual operation 
-* No Home Bridge needed as HomeKit Accessary Protocol (HAP), Secure Remote Password (SRP) are included, it can be paired directly with iOS Home app
+* No need to have Home Bridge as HomeKit Accessary Protocol (HAP) and Secure Remote Password (SRP) are included, you can pair with iOS Home app directly
 
 ## Related Projects 
 * HAP implementation relies on [Gera Kazakov](https://github.com/gera-k/uHap). It is great inspiration and I cannot thank him enough for utilizing the clean implementaion to my project
