@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Crypto\Aead.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\Chacha20.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\Curve25519.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\Ed25519.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\HmacSha512.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\MD.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\Poly1305.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\Sha512.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\Sha512blk.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\Srp.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Hap\Hap.cpp">
+      <Filter>Hap</Filter>
+    </ClCompile>
+    <ClCompile Include="Hap\HapDb.cpp">
+      <Filter>Hap</Filter>
+    </ClCompile>
+    <ClCompile Include="Hap\HapHttp.cpp">
+      <Filter>Hap</Filter>
+    </ClCompile>
+    <ClCompile Include="Hap\jsmn.cpp">
+      <Filter>Hap</Filter>
+    </ClCompile>
+    <ClCompile Include="Hap\picohttpparser.c">
+      <Filter>Hap</Filter>
+    </ClCompile>
+    <ClCompile Include="Linux\HapMdns.cpp">
+      <Filter>Linux</Filter>
+    </ClCompile>
+    <ClCompile Include="Linux\HapTcp.cpp">
+      <Filter>Linux</Filter>
+    </ClCompile>
+    <ClCompile Include="Servo\Servo.cpp">
+      <Filter>Servo</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\FileLog.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="CaveLock.cpp" />
+    <ClCompile Include="MyAccInfo.cpp" />
+    <ClCompile Include="Util\FileConfig.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="LED\LED.cpp">
+      <Filter>LED</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Button">
+      <UniqueIdentifier>{363d421c-4708-44b3-bb9b-9018a470065f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto">
+      <UniqueIdentifier>{f657b5db-61fc-46e6-ad2f-aee7163f00e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hap">
+      <UniqueIdentifier>{06629f1f-30aa-41fe-bad1-93d526dbcab0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux">
+      <UniqueIdentifier>{151e3092-bceb-4782-8f95-5da297dee265}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Servo">
+      <UniqueIdentifier>{6f1e0076-dca5-423f-a6f9-ba56679948a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{962262c5-602f-46d3-91e9-62d37b8b18a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LED">
+      <UniqueIdentifier>{cbc034e8-f0e3-43a1-a731-85c2bbf30e4d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Button\Button.h">
+      <Filter>Button</Filter>
+    </ClInclude>
+    <ClInclude Include="Crypto\Crypto.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="Crypto\MD.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="Crypto\Sha512blk.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="Crypto\Srp.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\Buffer.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\Hap.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\HapAppleCharacteristics.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\HapAppleServices.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\HapDb.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\HapHttp.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\HapJson.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\HapMdns.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\HapPairing.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\HapTcp.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\HapTlv.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\jsmn.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Hap\picohttpparser.h">
+      <Filter>Hap</Filter>
+    </ClInclude>
+    <ClInclude Include="Servo\Servo.h">
+      <Filter>Servo</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\CLI11.hpp">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\FileConfig.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\FileLog.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform.h" />
+    <ClInclude Include="CaveLock.h" />
+    <ClInclude Include="MyAccInfo.h" />
+    <ClInclude Include="LED\LED.h">
+      <Filter>LED</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

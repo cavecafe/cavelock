@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{b11baa91-58a6-472e-9666-a022f594bf8d}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>cavelock</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Raspberry</TargetLinuxPlatform>
+    <LinuxProjectType>{8748239F-558C-44D1-944B-07B09C35B330}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <RemoteTargetPath>/home/cavelock/projects/cavelock/bin/ARM/Debug/cavelock.out</RemoteTargetPath>
+    <RemoteProjectDir>/home/cavelock/projects/cavelock</RemoteProjectDir>
+    <RemoteDeployDir>/home/cavelock/projects/cavelock</RemoteDeployDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Link>
+      <LibraryDependencies>m;stdc++;pthread;dns_sd;wiringPi</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>gpio export 18 out &amp;&amp; gpio export 17 out &amp;&amp; gpio export 27 in</Command>
+      <Message>
+      </Message>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Link>
+      <LibraryDependencies>wiringPi</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>gpio export 17 out</Command>
+      <Message>export pin 17 using the gpio utility so that we can execute the blink program without sudo</Message>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Crypto\Aead.cpp" />
+    <ClCompile Include="Crypto\Chacha20.cpp" />
+    <ClCompile Include="Crypto\Curve25519.cpp" />
+    <ClCompile Include="Crypto\Ed25519.cpp" />
+    <ClCompile Include="Crypto\HmacSha512.cpp" />
+    <ClCompile Include="Crypto\MD.cpp" />
+    <ClCompile Include="Crypto\Poly1305.cpp" />
+    <ClCompile Include="Crypto\Sha512.cpp" />
+    <ClCompile Include="Crypto\Sha512blk.cpp" />
+    <ClCompile Include="Crypto\Srp.cpp" />
+    <ClCompile Include="Hap\Hap.cpp" />
+    <ClCompile Include="Hap\HapDb.cpp" />
+    <ClCompile Include="Hap\HapHttp.cpp" />
+    <ClCompile Include="Hap\jsmn.cpp" />
+    <ClCompile Include="Hap\picohttpparser.c" />
+    <ClCompile Include="LED\LED.cpp" />
+    <ClCompile Include="Linux\HapMdns.cpp" />
+    <ClCompile Include="Linux\HapTcp.cpp" />
+    <ClCompile Include="CaveLock.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MyAccInfo.cpp" />
+    <ClCompile Include="Servo\Servo.cpp" />
+    <ClCompile Include="Util\FileConfig.cpp" />
+    <ClCompile Include="Util\FileLog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Button\Button.h" />
+    <ClInclude Include="Crypto\Crypto.h" />
+    <ClInclude Include="Crypto\MD.h" />
+    <ClInclude Include="Crypto\Sha512blk.h" />
+    <ClInclude Include="Crypto\Srp.h" />
+    <ClInclude Include="Hap\Buffer.h" />
+    <ClInclude Include="Hap\Hap.h" />
+    <ClInclude Include="Hap\HapAppleCharacteristics.h" />
+    <ClInclude Include="Hap\HapAppleServices.h" />
+    <ClInclude Include="Hap\HapDb.h" />
+    <ClInclude Include="Hap\HapHttp.h" />
+    <ClInclude Include="Hap\HapJson.h" />
+    <ClInclude Include="Hap\HapMdns.h" />
+    <ClInclude Include="Hap\HapPairing.h" />
+    <ClInclude Include="Hap\HapTcp.h" />
+    <ClInclude Include="Hap\HapTlv.h" />
+    <ClInclude Include="Hap\jsmn.h" />
+    <ClInclude Include="Hap\picohttpparser.h" />
+    <ClInclude Include="CaveLock.h" />
+    <ClInclude Include="LED\LED.h" />
+    <ClInclude Include="MyAccInfo.h" />
+    <ClInclude Include="Platform.h" />
+    <ClInclude Include="Servo\Servo.h" />
+    <ClInclude Include="Util\CLI11.hpp" />
+    <ClInclude Include="Util\FileConfig.h" />
+    <ClInclude Include="Util\FileLog.h" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <CppLanguageStandard>c++14</CppLanguageStandard>
+      <CAdditionalWarning>switch;no-deprecated-declarations;empty-body;no-conversion;return-type;parentheses;no-pointer-sign;no-format;uninitialized;unreachable-code;unused-function;unused-value;unused-variable;</CAdditionalWarning>
+      <CppAdditionalWarning>switch;no-deprecated-declarations;empty-body;no-conversion;return-type;parentheses;no-format;uninitialized;unreachable-code;unused-function;unused-value;unused-variable;</CppAdditionalWarning>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <CLanguageStandard>c11</CLanguageStandard>
+    </ClCompile>
+    <Link>
+      <OutputFile>/home/cavelock/projects/cavelock/bin/ARM/Debug/cavelock.out</OutputFile>
+      <ShowProgress>true</ShowProgress>
+      <Version>false</Version>
+      <VerboseOutput>false</VerboseOutput>
+      <Trace>false</Trace>
+    </Link>
+    <PostBuildEvent>
+      <AdditionalSourcesToCopyMapping>
+      </AdditionalSourcesToCopyMapping>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
