@@ -7,13 +7,11 @@ cavelock is a D.I.Y. smart door lock that is runing on Raspberry Pi. It opens an
 [![cavelock demo](https://img.youtube.com/vi/mZIwY49XvS4/0.jpg)](https://www.youtube.com/watch?v=mZIwY49XvS4)
 
 ## Prerequisites
-```
 * Raspberry Pi
-* A servo and a relay to connect in to RPi 
+* A servo (SPEKTRUM A5030) and a relay to connect in to the Raspberry Pi 
 * C++ compiler (g++)
 * Visual Studio (for debugging)
 * Some knowledge on HomeKit (HAP, SRP)
-```
 
 ## Features
 * Run on Raspberry Pi Zero W in console (or systemd)
@@ -24,6 +22,8 @@ cavelock is a D.I.Y. smart door lock that is runing on Raspberry Pi. It opens an
 
 ## Related Projects 
 * HAP implementation rely on [Gera Kazakov](https://github.com/gera-k/uHap). It is great inspiration and I cannot thank him enough for utilizing the clean implementaion to my project
+
+## References
 * [HomeKit Accessary Protocol](https://developer.apple.com/support/homekit-accessory-protocol/)
 * [Secure Remote Password](https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol)
 
@@ -32,4 +32,4 @@ cavelock is a D.I.Y. smart door lock that is runing on Raspberry Pi. It opens an
 * AutoDesk Fusion 360 for 3D modeling of container
 
 ## Test
-* Tested only with RPi Zero Wireless
+* Tested only with RPi Zero Wireless, and a SPEKTRUM A5030 servo
