@@ -6,16 +6,16 @@ INIT_SCRIPT = homekit
 DEBUG ?= 0
 
 SRCS_C := \
-    $(shell find ../Hap/*.c) \
+    $(shell find ./Hap/*.c) \
 
 
 SRCS_CPP := \
-    $(shell find ../Hap/*.cpp) \
-    $(shell find ../Crypto/*.cpp) \
-    $(shell find ../Util/*.cpp) \
-    $(shell find ../Linux/*.cpp) \
-	$(shell find ../Button/*.cpp) \
-	$(shell find ../Servo/*.cpp) \
+    $(shell find ./Hap/*.cpp) \
+    $(shell find ./Crypto/*.cpp) \
+    $(shell find ./Util/*.cpp) \
+    $(shell find ./Linux/*.cpp) \
+	$(shell find ./Button/*.cpp) \
+	$(shell find ./Servo/*.cpp) \
     main.cpp
 
 ifeq ($(DEBUG),1)
@@ -70,4 +70,3 @@ clean:
 	rm -f .depend *.o $(TARGET)
 
 .PHONY: clean depend
-

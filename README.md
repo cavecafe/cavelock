@@ -26,7 +26,7 @@ cavelock is a D.I.Y. smart door lock that is running on Raspberry Pi. It opens a
 * HAP implementation relies on [Gera Kazakov](https://github.com/gera-k/uHap). It is great inspiration and I cannot thank him enough for utilizing the clean implementation to my project
 
 ## References
-* [HomeKit Accessary Protocol](https://developer.apple.com/support/homekit-accessory-protocol/)
+* [HomeKit Accessory Protocol](https://developer.apple.com/support/homekit-accessory-protocol/)
 * [Secure Remote Password](https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol)
 
 ## Other hardware 
